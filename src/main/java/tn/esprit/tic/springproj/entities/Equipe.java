@@ -1,9 +1,8 @@
 package tn.esprit.tic.springproj.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Equipe {
@@ -13,4 +12,10 @@ public class Equipe {
     private String libelle;
     private int nbPointsTotal;
     private int classementGeneral;
+
+    @OneToMany(mappedBy = "equipe", cascade = CascadeType.PERSIST)
+    private List<Pilote> Pilotes;
+
+    @OneToMany(mappedBy = "equipe", cascade = CascadeType.PERSIST)
+    private List<Contrat> contarts;
 }

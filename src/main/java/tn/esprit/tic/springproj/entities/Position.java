@@ -1,9 +1,6 @@
 package tn.esprit.tic.springproj.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Position {
@@ -12,5 +9,11 @@ public class Position {
     private long idPsition;
     private int classment;
     private int nbPoints;
+
+    @ManyToOne
+    private Course course;
+
+    @ManyToOne
+    private Pilote pilote;
 
 }

@@ -1,9 +1,6 @@
 package tn.esprit.tic.springproj.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class DetailChampionnat {
@@ -13,5 +10,7 @@ public class DetailChampionnat {
     private String code;
     private String description;
 
+    @OneToOne(mappedBy="championnatDetail")
+    private Championnat championnat;
 
 }

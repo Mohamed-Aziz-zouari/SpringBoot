@@ -1,9 +1,6 @@
 package tn.esprit.tic.springproj.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Contrat {
@@ -13,5 +10,12 @@ public class Contrat {
     private float montant;
     private String annee;
     private Boolean archived;
+
+    @ManyToOne
+    private Equipe equipe;
+
+    @ManyToOne
+    private Sponsor sponsor;
+
 
 }
