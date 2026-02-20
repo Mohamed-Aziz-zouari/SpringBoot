@@ -21,8 +21,8 @@ public class Sponsor {
     private String nom;
     private String pays;
     private Float budgetAnnuel;
-    private Boolean bloquerContrat;
-    private Boolean archived;
+    private boolean bloquerContrat;
+    private boolean archived;
     private LocalDate dateCreation;
     private LocalDate dateDerniereModification;
 

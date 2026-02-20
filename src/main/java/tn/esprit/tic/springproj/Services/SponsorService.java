@@ -1,11 +1,15 @@
 package tn.esprit.tic.springproj.Services;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.tic.springproj.Repository.SponsorRepository;
 import tn.esprit.tic.springproj.entities.Sponsor;
 
 import java.time.LocalDate;
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class SponsorService implements IsponsorService{
     SponsorRepository sp;
     @Override
