@@ -17,12 +17,12 @@ import java.util.List;
 public class Sponsor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idSponsor;
+    private Long idSponsor;
     private String nom;
     private String pays;
     private Float budgetAnnuel;
-    private boolean bloquerContrat;
-    private boolean archived;
+    private Boolean bloquerContrat;
+    private Boolean archived;
     private LocalDate dateCreation;
     private LocalDate dateDerniereModification;
 

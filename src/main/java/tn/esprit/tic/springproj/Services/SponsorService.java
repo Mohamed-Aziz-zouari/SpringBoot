@@ -32,7 +32,7 @@ public class SponsorService implements IsponsorService{
 
     @Override
     public Sponsor modifierSponsor(Sponsor sponsor) {
-        sponsor.setDateCreation(LocalDate.now());
+        sponsor.setDateDerniereModification(LocalDate.now());
         return sp.save(sponsor);
     }
 
