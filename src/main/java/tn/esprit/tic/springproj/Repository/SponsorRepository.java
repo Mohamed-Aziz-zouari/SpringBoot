@@ -5,5 +5,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import tn.esprit.tic.springproj.entities.Sponsor;
 
+import java.util.List;
+
 public interface SponsorRepository extends JpaRepository<Sponsor, Long> {
+
+    List<Sponsor> findByBudgetAnnuel(Float b);
 }
