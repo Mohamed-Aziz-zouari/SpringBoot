@@ -19,10 +19,10 @@ public class Contrat {
     private String annee;
     private Boolean archived;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Equipe equipe;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Sponsor sponsor;
 
 

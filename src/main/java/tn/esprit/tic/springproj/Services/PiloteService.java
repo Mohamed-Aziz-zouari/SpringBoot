@@ -1,11 +1,15 @@
 package tn.esprit.tic.springproj.Services;
 
 import lombok.AllArgsConstructor;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.springproj.Repository.EquipeRepository;
 import tn.esprit.tic.springproj.Repository.PiloteRepository;
+import tn.esprit.tic.springproj.entities.Categorie;
 import tn.esprit.tic.springproj.entities.Equipe;
 import tn.esprit.tic.springproj.entities.Pilote;
+
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -26,5 +30,13 @@ public class PiloteService implements IpiloteService{
         pp.save(p);
 
         return p;
+    }
+    @Scheduled(cron ="* 15 11 31 12 *")
+    public void updatePoints(){
+    List<Pilote> pilotes = pp.findAll();
+    Categorie categorie = Categorie.FORMULA1;
+    for(Pilote p : pilotes){
+
+    }
     }
 }

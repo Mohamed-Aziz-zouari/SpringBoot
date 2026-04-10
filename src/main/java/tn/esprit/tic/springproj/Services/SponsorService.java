@@ -1,8 +1,10 @@
 package tn.esprit.tic.springproj.Services;
 
 import lombok.AllArgsConstructor;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.springproj.Repository.SponsorRepository;
+import tn.esprit.tic.springproj.entities.Contrat;
 import tn.esprit.tic.springproj.entities.Sponsor;
 
 import java.time.LocalDate;
