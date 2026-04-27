@@ -5,6 +5,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import tn.esprit.tic.springproj.Repository.EquipeRepository;
 import tn.esprit.tic.springproj.Repository.PiloteRepository;
+import tn.esprit.tic.springproj.dto.PiloteDto;
 import tn.esprit.tic.springproj.entities.Categorie;
 import tn.esprit.tic.springproj.entities.Equipe;
 import tn.esprit.tic.springproj.entities.Pilote;
@@ -38,5 +39,10 @@ public class PiloteService implements IpiloteService{
     for(Pilote p : pilotes){
 
     }
+    }
+
+    @Override
+    public List<PiloteDto> listeWinners(Integer annee) {
+        return pp.listeWinners(annee);
     }
 }
